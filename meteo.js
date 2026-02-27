@@ -27,8 +27,13 @@ var Wheaterdata=JSON.parse(objet[0].response)
 
     //****************Header*************** */
     var data=JSON.parse(objet[1].response)
+
     var city=data.address.city||data.address.town||data.address.village|| "lien inconnue"
-    document.getElementById("ville").textContent=city
+
+    var x=document.getElementById("ville")
+    x.style.color="white"
+    x.textContent=city.toUpperCase()
+
     // h1 f header
     document.querySelector("#temp").textContent=Wheaterdata.current.temperature_2m.toFixed(2)+"°C"
     // h3 f header 
