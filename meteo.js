@@ -5,10 +5,11 @@ import {liste,Wheatercode,temperature,Sunset_Sunrise,jours,third_div} from "./tr
 
 var objet=data()
 
+
 //____________________________________API ville__________________________________________________________
 
-objet.onload=()=> {
-var Wheaterdata=JSON.parse(objet.response)
+objet[0].onload=()=> {
+var Wheaterdata=JSON.parse(objet[0].response)
 
 
   var date=new Date()
@@ -25,7 +26,9 @@ var Wheaterdata=JSON.parse(objet.response)
 
 
     //****************Header*************** */
-
+    var data=JSON.parse(objet[1].response)
+    var city=data.address.city||data.address.town||data.address.village|| "lien inconnue"
+    document.getElementById("ville").textContent=city
     // h1 f header
     document.querySelector("#temp").textContent=Wheaterdata.current.temperature_2m+"°C"
     // h3 f header 
@@ -96,7 +99,7 @@ var Wheaterdata=JSON.parse(objet.response)
 
 
     
-    console.log(Wheaterdata)
+    // console.log(Wheaterdata)
 
 
 
@@ -104,11 +107,11 @@ var Wheaterdata=JSON.parse(objet.response)
 
 }
 
-objet.onerror= ()=> {
+objet[0].onerror= ()=> {
      console.log("Error api !!!!")
 }
 
-objet.onloadstart = () => {
+objet[0].onloadstart = () => {
     const loaderContainer = document.querySelector('.load');
     
     
@@ -141,7 +144,7 @@ objet.onloadstart = () => {
     `;
 };
 
-objet.onloadend = () => {
+objet[0].onloadend = () => {
     document.querySelector(".load").style.display = "none";
 };
 
