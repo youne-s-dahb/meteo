@@ -1,0 +1,269 @@
+/* ================== ANIMATION ================== */
+@keyframes xmex{
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
+
+@keyframes sky {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ================== RESET ================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+/* ================== BODY ================== */
+body{
+    background: linear-gradient(-45deg, #00BFFF, #87CEFA, #4facfe, #00f2fe);
+    background-size: 400% 400%;
+    animation: sky 12s ease infinite;
+    color: white;
+}
+
+/* ================== HEADER ================== */
+header {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    width: 89%;
+    text-align: center;
+}
+
+header i{
+    font-size: 3rem;
+    color: rgb(244, 220, 7);
+    animation: xmex 8s linear infinite;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+}
+
+header div h1{ font-size: 5rem; }
+header div h2{ font-size: 3rem; }
+
+header div h3{
+    margin-top: 50px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* ================== GLASS EFFECT ================== */
+.lwl,
+.second,
+.third{
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    width: 90%;
+    margin: auto;
+}
+
+/* ================== FIRST SECTION ================== */
+.lwl{
+    text-align: center;
+    display: flex;
+    height: 70vh;
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+.lwl .column {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.lwl .KOLXY{
+    margin-left: 30px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.lwl .KOLXY:hover{
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.2);
+}
+
+.lwl .column div p{
+    font-size: 2rem;
+    margin: 12px 0;
+}
+
+.lwl .column .KOLXY i{
+    font-size: 2rem;
+    color: rgb(244, 220, 7);
+    margin: 12px 0;
+    padding: 10px;
+}
+
+.lwl .column .KOLXY div i{
+    color: white;
+}
+
+.lwl .column .KOLXY div span{
+    margin-left: 6px;
+}
+
+/* ================== SECOND SECTION ================== */
+.second{
+    display: flex;
+    justify-content: space-around;
+    height: 40vh;
+    margin-top: 20px;
+    padding: 19px;
+    overflow-y: auto;
+}
+
+.temax span{
+    color: #FF3B30;
+    font-weight: bold;
+    text-shadow: 0 0 10px #f85d55;
+}
+
+.temin span{
+    color: #007BFF;
+    font-weight: bold;
+    text-shadow: 0 0 10px #4da0fa;
+}
+
+p{
+    margin-top: 12px;
+}
+#xeta{
+    color: blue;
+}
+/* ================== THIRD SECTION ================== */
+.third{
+    text-align: center;
+    height: 40vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 19px;
+}
+
+.allk{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.third div h3{
+    font-size: 2rem;
+    margin-top: 12px;
+}
+
+.third div p{
+    font-size: 1.4rem;
+    margin-top: 12px;
+}
+
+.third div i{
+    font-size: 8rem;
+    margin-top: 12px;
+    color: rgb(244, 220, 7);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+}
+/* ================== INPUT CONTAINER ================== */
+.city-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 30px;
+    padding: 10px 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+
+
+
+/* ================== INPUT FIELD ================== */
+.city-input input{
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.city-input input::placeholder{
+    color: #f0f0f0aa;
+    font-style: italic;
+}
+
+/* ================== INPUT HOVER/FOCUS ================== */
+.city-input input:hover,
+.city-input input:focus{
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.02);
+}
+
+/* ================== BUTTON ================== */
+.city-input button{
+    margin-left: 10px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 50%;
+    background: #f4dc07; /* لون الشمس */
+    color: #000;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.city-input button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #f4dc07;
+}
+
+
+/* ================== MEDIA QUERY ================== */
+@media screen and (max-width: 768px){
+   
+    header i{
+    font-size: 1.5rem;
+    color: rgb(244, 220, 7);
+    animation: xmex 8s linear infinite;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+    .allk div h3{
+        font-size: 1rem;
+    }
+    .allk div i{
+         font-size: 3rem;
+    }
+    .third{
+        margin-top: 50px;
+        height: 29vh;
+    } 
+    .lwl{
+        height: 60vh;   
+    }
+    
+.lwl .column div p{
+    font-size: 1rem;
+    margin: 12px 0;
+}
+
+}

@@ -1,0 +1,15 @@
+<div class="all">
+                                 <p>${temmax[i]}°</p>
+                            </div>
+
+                            <div class="all">
+                                <i class="fa-solid fa-sun sun" ></i>
+                            </div>
+
+                            <div class="all">
+                                <p>${temmin[i]}°</p>
+                            </div>
+
+                            <div class="all">
+                                <i class="fa-solid fa-moon mon" ></i>
+                            </div>
