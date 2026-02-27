@@ -261,9 +261,17 @@ p{
         height: 60vh;   
     }
     
-.lwl .column div p{
-    font-size: 1rem;
-    margin: 12px 0;
+    .lwl .column div p{
+        font-size: 1rem;
+        margin: 12px 0;
+    }
+    .second{
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    margin-top: 20px;
+    padding: 19px;
+    overflow-y: auto;
 }
 
 }
