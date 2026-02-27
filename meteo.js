@@ -62,7 +62,7 @@ var Wheaterdata=JSON.parse(objet.response)
     var column=document.querySelector(".column");
     for(let i=0;i<lis.length;i++){
         hours=lis[i].split("T")
-        column.innerHTML+=` <div class="KOLXY"> <p>${hours[1]}</p>${codes[code.listcode[i]]?`<i class="${codes[code.listcode[i]].icon}" style="color:${codes[code.listcode[i]].color}"></i>`:``}<p>${tem[i]}°C</p><div><i class="fa-solid fa-droplet" id="xeta"></i><br>  <span>${code.listxeta[i]}%</span> </div></div>  `
+        column.innerHTML+=` <div class="KOLXY"> <p><b>${hours[1]}</b></p>${codes[code.listcode[i]]?`<i class="${codes[code.listcode[i]].icon}" style="color:${codes[code.listcode[i]].color}"></i>`:``}<p>${tem[i]}°C</p><div><i class="fa-solid fa-droplet" id="xeta"></i><br>  <span>${code.listxeta[i]}%</span> </div></div>  `
         
     }
     //***************************************************** */
