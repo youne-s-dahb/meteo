@@ -30,9 +30,9 @@ var Wheaterdata=JSON.parse(objet[0].response)
     var city=data.address.city||data.address.town||data.address.village|| "lien inconnue"
     document.getElementById("ville").textContent=city
     // h1 f header
-    document.querySelector("#temp").textContent=Wheaterdata.current.temperature_2m+"°C"
+    document.querySelector("#temp").textContent=Wheaterdata.current.temperature_2m.toFixed(2)+"°C"
     // h3 f header 
-    document.querySelector("#Feels").innerHTML = `${Wheaterdata.current.temperature_2m}°  Ressenti comme ${Wheaterdata.current.apparent_temperature}°<br>${new Date(Wheaterdata.current.time).toLocaleString('fr-FR', { weekday: 'long'}).toUpperCase()} ${date.getHours()}:${date.getMinutes()}`;
+    document.querySelector("#Feels").innerHTML = `${Wheaterdata.current.temperature_2m.toFixed(2)}°  Ressenti comme ${Wheaterdata.current.apparent_temperature.toFixed(2)}°<br>${new Date(Wheaterdata.current.time).toLocaleString('fr-FR', { weekday: 'long'}).toUpperCase()} ${date.getHours()}:${date.getMinutes()}`;
     //verifier is day or not
     if(Wheaterdata.current.is_day==0){
                 document.querySelector("body").style.background="linear-gradient(to top, #0f2027, #203a43, #2c5364)";
@@ -65,7 +65,7 @@ var Wheaterdata=JSON.parse(objet[0].response)
     var column=document.querySelector(".column");
     for(let i=0;i<lis.length;i++){
         hours=lis[i].split("T")
-        column.innerHTML+=` <div class="KOLXY"> <p><b>${hours[1]}</b></p>${codes[code.listcode[i]]?`<i class="${codes[code.listcode[i]].icon}" style="color:${codes[code.listcode[i]].color}"></i>`:``}<p>${tem[i]}°C</p><div><i class="fa-solid fa-droplet" id="xeta"></i><br>  <span>${code.listxeta[i]}%</span> </div></div>  `
+        column.innerHTML+=` <div class="KOLXY"> <p><b>${hours[1]}</b></p>${codes[code.listcode[i]]?`<i class="${codes[code.listcode[i]].icon}" style="color:${codes[code.listcode[i]].color}"></i>`:``}<p>${tem[i].toFixed(2)}°C</p><div><i class="fa-solid fa-droplet" id="xeta"></i><br>  <span>${code.listxeta[i]}%</span> </div></div>  `
         
     }
     //***************************************************** */
