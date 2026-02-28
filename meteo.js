@@ -123,7 +123,7 @@ var Wheaterdata=JSON.parse(objet[0].response)
                 inline: 'center', // katjib sa3a f center dyal scrool bar
                 block: 'nearest'})//kat7afed 3la position bla  mat7rek page mn lfooo9
 
-            allHours[HOURRR].style.border = "5px solid black";
+            allHours[HOURRR].style.border = "2px solid black";
         }
 
     
