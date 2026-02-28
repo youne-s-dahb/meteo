@@ -4,6 +4,45 @@ import {liste,Wheatercode,temperature,Sunset_Sunrise,jours,third_div} from "./tr
 
 
 var objet=data()
+objet[0].onloadstart = () => {
+    const loaderContainer = document.querySelector('.load');
+    
+    
+    Object.assign(loaderContainer.style, {
+        display: "flex",
+        position: "fixed",
+        top: "0",
+        left: "0",
+        width: "100%",
+        height: "100%",
+        backgroundColor: "rgba(255, 255, 255, 0.9)",
+        zIndex: "9999",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column"
+    });
+
+    loaderContainer.innerHTML = `
+        <div id="loading-screen" style="text-align: center;">
+            <dotlottie-wc 
+                src="https://lottie.host/814b3a7f-4cab-43b4-bc64-0700c4f93e6d/ETQz7UXjtL.lottie" 
+                style="width: 250px; height: 250px;" 
+                autoplay 
+                loop>
+            </dotlottie-wc>
+            <p style="font-family: sans-serif; font-weight: bold; font-size: 1.2rem; color: #333;">
+                Loading ...
+            </p>
+        </div>
+    `;
+};
+
+objet[0].onloadend = () => {
+    document.querySelector(".load").style.display = "none";
+};
+objet[0].onerror= ()=> {
+     console.log("Error api !!!!")
+}
 
 
 
@@ -125,44 +164,6 @@ var Wheaterdata=JSON.parse(objet[0].response)
 
 }
 
-objet[0].onerror= ()=> {
-     console.log("Error api !!!!")
-}
 
-objet[0].onloadstart = () => {
-    const loaderContainer = document.querySelector('.load');
-    
-    
-    Object.assign(loaderContainer.style, {
-        display: "flex",
-        position: "fixed",
-        top: "0",
-        left: "0",
-        width: "100%",
-        height: "100%",
-        backgroundColor: "rgba(255, 255, 255, 0.9)",
-        zIndex: "9999",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column"
-    });
 
-    loaderContainer.innerHTML = `
-        <div id="loading-screen" style="text-align: center;">
-            <dotlottie-wc 
-                src="https://lottie.host/814b3a7f-4cab-43b4-bc64-0700c4f93e6d/ETQz7UXjtL.lottie" 
-                style="width: 250px; height: 250px;" 
-                autoplay 
-                loop>
-            </dotlottie-wc>
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 1.2rem; color: #333;">
-                Loading ...
-            </p>
-        </div>
-    `;
-};
-
-objet[0].onloadend = () => {
-    document.querySelector(".load").style.display = "none";
-};
 
