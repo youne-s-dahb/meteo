@@ -31,6 +31,7 @@ var Wheaterdata=JSON.parse(objet[0].response)
     var city=data.address.city||data.address.town||data.address.village|| "lien inconnue"
 
     var x=document.getElementById("ville")
+   
     x.textContent=city.toUpperCase()
 
     // h1 f header
@@ -67,11 +68,13 @@ var Wheaterdata=JSON.parse(objet[0].response)
   
 
     var column=document.querySelector(".column");
+    var content="";
     for(let i=0;i<lis.length;i++){
         hours=lis[i].split("T")
-        column.innerHTML+=` <div class="KOLXY"> <p><b>${hours[1]}</b></p>${codes[code.listcode[i]]?`<i class="${codes[code.listcode[i]].icon}" style="color:${codes[code.listcode[i]].color}"></i>`:``}<p>${tem[i].toFixed(2)}°C</p><div><i class="fa-solid fa-droplet" id="xeta"></i><br>  <span>${code.listxeta[i]}%</span> </div></div>  `
+        content+=` <div class="KOLXY"> <p><b>${hours[1]}</b></p>${codes[code.listcode[i]]?`<i class="${codes[code.listcode[i]].icon}" style="color:${codes[code.listcode[i]].color}"></i>`:``}<p>${tem[i].toFixed(2)}°C</p><div><i class="fa-solid fa-droplet" id="xeta"></i><br>  <span>${code.listxeta[i]}%</span> </div></div>  `
         
     }
+    column.innerHTML=content
     //***************************************************** */
 
 
