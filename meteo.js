@@ -83,8 +83,8 @@ var Wheaterdata=JSON.parse(objet[0].response)
                 behavior: 'smooth', //scrool smooth
                 inline: 'center', // katjib sa3a f center dyal scrool bar
                 block: 'nearest'})//kat7afed 3la position bla  mat7rek page mn lfooo9
-                
-            allHours[HOURRR].style.border = "1px solid white";
+
+            allHours[HOURRR].style.border = "5px solid black";
         }
 
     
