@@ -6,7 +6,6 @@ import {liste,Wheatercode,temperature,Sunset_Sunrise,jours,third_div} from "./tr
 var objet=data()
 
 
-//____________________________________API ville__________________________________________________________
 
 objet[0].onload=()=> {
 var Wheaterdata=JSON.parse(objet[0].response)
