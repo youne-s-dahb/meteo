@@ -31,7 +31,6 @@ var Wheaterdata=JSON.parse(objet[0].response)
     var city=data.address.city||data.address.town||data.address.village|| "lien inconnue"
 
     var x=document.getElementById("ville")
-    x.style.color="white"
     x.textContent=city.toUpperCase()
 
     // h1 f header
