@@ -67,13 +67,28 @@ var Wheaterdata=JSON.parse(objet[0].response)
   
 
     var column=document.querySelector(".column");
+    
     var content="";
     for(let i=0;i<lis.length;i++){
-        hours=lis[i].split("T")
+        var hours=lis[i].split("T")
         content+=` <div class="KOLXY"> <p><b>${hours[1]}</b></p>${codes[code.listcode[i]]?`<i class="${codes[code.listcode[i]].icon}" style="color:${codes[code.listcode[i]].color}"></i>`:``}<p>${tem[i].toFixed(2)}°C</p><div><i class="fa-solid fa-droplet" id="xeta"></i><br>  <span>${code.listxeta[i]}%</span> </div></div>  `
-        
+      
     }
     column.innerHTML=content
+    var allHours=document.querySelectorAll(".KOLXY")
+    var HOURRR=new Date().getHours();
+
+      if(allHours[HOURRR]){
+            allHours[HOURRR].scrollIntoView({
+                behavior: 'smooth', //scrool smooth
+                inline: 'center', // katjib sa3a f center dyal scrool bar
+                block: 'nearest'})//kat7afed 3la position bla  mat7rek page mn lfooo9
+                
+            allHours[HOURRR].style.border = "1px solid white";
+        }
+
+    
+
     //***************************************************** */
 
 
@@ -106,9 +121,6 @@ var Wheaterdata=JSON.parse(objet[0].response)
 
     
     // console.log(Wheaterdata)
-
-
-
   
 
 }
