@@ -35,6 +35,7 @@ header {
     padding: 30px;
     width: 89%;
     text-align: center;
+
 }
 
 header i{
@@ -44,13 +45,14 @@ header i{
     text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
 }
 
-header div h1{ font-size: 5rem; }
-header div h2{ font-size: 3rem; }
+header div h1{ font-size: 5rem;text-align: center; }
+header div h2{ font-size: 3rem;text-align: center; }
 
 header div h3{
     margin-top: 50px;
     font-size: 1rem;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 /* ================== GLASS EFFECT ================== */
