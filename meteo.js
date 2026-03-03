@@ -5,44 +5,86 @@ import {liste,Wheatercode,temperature,Sunset_Sunrise,jours,third_div} from "./tr
 
 var objet=data()
 objet[0].onloadstart = () => {
+
     const loaderContainer = document.querySelector('.load');
-    
-    
+
+   
+
+   
+
     Object.assign(loaderContainer.style, {
+
         display: "flex",
+
         position: "fixed",
+
         top: "0",
+
         left: "0",
+
         width: "100%",
+
         height: "100%",
+
         backgroundColor: "rgba(255, 255, 255, 0.9)",
+
         zIndex: "9999",
+
         justifyContent: "center",
+
         alignItems: "center",
+
         flexDirection: "column"
+
     });
 
+
+
     loaderContainer.innerHTML = `
+
         <div id="loading-screen" style="text-align: center;">
-            <dotlottie-wc 
-                src="https://lottie.host/814b3a7f-4cab-43b4-bc64-0700c4f93e6d/ETQz7UXjtL.lottie" 
-                style="width: 250px; height: 250px;" 
-                autoplay 
+
+            <dotlottie-wc
+
+                src="https://lottie.host/814b3a7f-4cab-43b4-bc64-0700c4f93e6d/ETQz7UXjtL.lottie"
+
+                style="width: 250px; height: 250px;"
+
+                autoplay
+
                 loop>
+
             </dotlottie-wc>
+
             <p style="font-family: sans-serif; font-weight: bold; font-size: 1.2rem; color: #333;">
+
                 Loading ...
+
             </p>
+
         </div>
+
     `;
+
 };
 
+
+
 objet[0].onloadend = () => {
+
     document.querySelector(".load").style.display = "none";
+
 };
+
 objet[0].onerror= ()=> {
+
      console.log("Error api !!!!")
+
 }
+
+
+
+
 
 
 
@@ -110,7 +152,7 @@ var Wheaterdata=JSON.parse(objet[0].response)
     var content="";
     for(let i=0;i<lis.length;i++){
         var hours=lis[i].split("T")
-        content+=` <div class="KOLXY"> <p><b>${hours[1]}</b></p>${codes[code.listcode[i]]?`<i class="${codes[code.listcode[i]].icon}" style="color:${codes[code.listcode[i]].color}"></i>`:``}<p>${tem[i].toFixed(2)}°C</p><div><i class="fa-solid fa-droplet" id="xeta"></i><br>  <span>${code.listxeta[i]}%</span> </div></div>  `
+        content+=` <div class="KOLXY"> <p><b>${hours[1]} </b></p>${codes[code.listcode[i]]?`<i class="${codes[code.listcode[i]].icon}" style="color:${codes[code.listcode[i]].color}"></i>`:``}<p>${tem[i].toFixed(2)}°C</p><div><i class="fa-solid fa-droplet" id="xeta"></i><br>  <span>${code.listxeta[i]}%</span> </div></div>  `
       
     }
     column.innerHTML=content
@@ -135,7 +177,7 @@ var Wheaterdata=JSON.parse(objet[0].response)
 
         for(let i=0;i<7;i++){
             
-             document.querySelector(".jrs").innerHTML+=`<p><b>${jr[i]}</b> </p>`
+            document.querySelector(".jrs").innerHTML+=`<p><b>${jr[i]}</b> </p>`
             document.querySelector(".temax").innerHTML+=`<p>Max :<span>${temmax[i].toFixed(2)} </span> ° C</p>`
             document.querySelector(".temin").innerHTML+=`<p>Min  :<span>${temmin[i].toFixed(2)} </span>° C</p>`
         }
