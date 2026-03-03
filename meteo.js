@@ -104,30 +104,30 @@ var Wheaterdata=JSON.parse(objet[0].response)
 
 
     //****************Header*************** */
-    // // var data=JSON.parse(objet[1].response)
+    var data=JSON.parse(objet[1].response)
 
-    // var city=data.address.city||data.address.town||data.address.village|| "lien inconnue"
+    var city=data.address.city||data.address.town||data.address.village|| "lien inconnue"
 
-    // var x=document.getElementById("ville")
+    var x=document.getElementById("ville")
    
-    // // x.textContent=city.toUpperCase()
+    x.textContent=city.toUpperCase()
 
-    // // h1 f header
-    // document.querySelector("#temp").textContent=Wheaterdata.current.temperature_2m.toFixed(2)+"°C"
-    // // h3 f header 
-    // document.querySelector("#Feels").innerHTML = `${Wheaterdata.current.temperature_2m.toFixed(2)}°  Ressenti comme ${Wheaterdata.current.apparent_temperature.toFixed(2)}°<br>${new Date(Wheaterdata.current.time).toLocaleString('fr-FR', { weekday: 'long'}).toUpperCase()} ${date.getHours()}:${date.getMinutes()}`;
-    // //verifier is day or not
-    // if(Wheaterdata.current.is_day==0){
-    //             document.querySelector("body").style.background="linear-gradient(to top, #0f2027, #203a43, #2c5364)";
-    //            var star=document.querySelectorAll("i")[0]
-    //            var star1=document.querySelectorAll("i")[1]
-    //            star.className="fa-solid fa-star"
-    //            star.style.color="white"
-    //            star.style.textShadow="3px 3px 10px black"
-    //            star1.className="fa-solid fa-star"
-    //            star1.style.color="white"
-    //            star1.style.textShadow="3px 3px 10px black"
-    // }
+    // h1 f header
+    document.querySelector("#temp").textContent=Wheaterdata.current.temperature_2m.toFixed(2)+"°C"
+    // h3 f header 
+    document.querySelector("#Feels").innerHTML = `${Wheaterdata.current.temperature_2m.toFixed(2)}°  Ressenti comme ${Wheaterdata.current.apparent_temperature.toFixed(2)}°<br>${new Date(Wheaterdata.current.time).toLocaleString('fr-FR', { weekday: 'long'}).toUpperCase()} ${date.getHours()}:${date.getMinutes()}`;
+    //verifier is day or not
+    if(Wheaterdata.current.is_day==0){
+                document.querySelector("body").style.background="linear-gradient(to top, #0f2027, #203a43, #2c5364)";
+               var star=document.querySelectorAll("i")[0]
+               var star1=document.querySelectorAll("i")[1]
+               star.className="fa-solid fa-star"
+               star.style.color="white"
+               star.style.textShadow="3px 3px 10px black"
+               star1.className="fa-solid fa-star"
+               star1.style.color="white"
+               star1.style.textShadow="3px 3px 10px black"
+    }
     //*************************************** */
 
 
