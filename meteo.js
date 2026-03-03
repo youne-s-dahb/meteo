@@ -7,10 +7,8 @@ var objet=data()
 objet[0].onloadstart = () => {
 
     const loaderContainer = document.querySelector('.load');
+    loaderContainer.style.display="flex"
 
-   
-
-   
 
 //     Object.assign(loaderContainer.style, {
 
