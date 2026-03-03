@@ -12,59 +12,59 @@ objet[0].onloadstart = () => {
 
    
 
-    Object.assign(loaderContainer.style, {
+//     Object.assign(loaderContainer.style, {
 
-        display: "flex",
+//         display: "flex",
 
-        position: "fixed",
+//         position: "fixed",
 
-        top: "0",
+//         top: "0",
 
-        left: "0",
+//         left: "0",
 
-        width: "100%",
+//         width: "100%",
 
-        height: "100%",
+//         height: "100%",
 
-        backgroundColor: "rgba(255, 255, 255, 0.9)",
+//         backgroundColor: "rgba(255, 255, 255, 0.9)",
 
-        zIndex: "9999",
+//         zIndex: "9999",
 
-        justifyContent: "center",
+//         justifyContent: "center",
 
-        alignItems: "center",
+//         alignItems: "center",
 
-        flexDirection: "column"
+//         flexDirection: "column"
 
-    });
+//     });
 
 
 
-    loaderContainer.innerHTML = `
+//     loaderContainer.innerHTML = `
 
-        <div id="loading-screen" style="text-align: center;">
+//         <div id="loading-screen" style="text-align: center;">
 
-            <dotlottie-wc
+//             <dotlottie-wc
 
-                src="https://lottie.host/814b3a7f-4cab-43b4-bc64-0700c4f93e6d/ETQz7UXjtL.lottie"
+//                 src="https://lottie.host/814b3a7f-4cab-43b4-bc64-0700c4f93e6d/ETQz7UXjtL.lottie"
 
-                style="width: 250px; height: 250px;"
+//                 style="width: 250px; height: 250px;"
 
-                autoplay
+//                 autoplay
 
-                loop>
+//                 loop>
 
-            </dotlottie-wc>
+//             </dotlottie-wc>
 
-            <p style="font-family: sans-serif; font-weight: bold; font-size: 1.2rem; color: #333;">
+//             <p style="font-family: sans-serif; font-weight: bold; font-size: 1.2rem; color: #333;">
 
-                Loading ...
+//                 Loading ...
 
-            </p>
+//             </p>
 
-        </div>
+//         </div>
 
-    `;
+//     `;
 
 };
 
