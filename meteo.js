@@ -105,8 +105,9 @@ var Wheaterdata=JSON.parse(objet[0].response)
 
     //****************Header*************** */
     var data=JSON.parse(objet[1].response)
+    console.log(data)
 
-    var city=data.address.city||data.address.town||data.address.village|| "lien inconnue"
+    var city=data.city
 
     var x=document.getElementById("ville")
    
