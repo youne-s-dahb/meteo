@@ -91,8 +91,12 @@ header div h3{
     height: 70vh;
     margin-bottom: 30px;
     overflow-x: auto;
+    
 }
-
+.lwl {
+    scrollbar-width: thin;                   /* "auto" or "thin" */
+    scrollbar-color: #a1c4fd transparent; /* thumb color | track color */
+}
 .lwl .column {
     display: flex;
     align-items: center;
@@ -275,6 +279,7 @@ footer {
     margin-top: 20px;
     padding: 19px;
     overflow-y: auto;
+    
 }
 
 }
